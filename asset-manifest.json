@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/creatoros-assignment/static/css/main.133ac507.chunk.css",
-    "main.js": "/creatoros-assignment/static/js/main.376162d6.chunk.js",
-    "main.js.map": "/creatoros-assignment/static/js/main.376162d6.chunk.js.map",
+    "main.js": "/creatoros-assignment/static/js/main.978a465c.chunk.js",
+    "main.js.map": "/creatoros-assignment/static/js/main.978a465c.chunk.js.map",
     "runtime-main.js": "/creatoros-assignment/static/js/runtime-main.3f167048.js",
     "runtime-main.js.map": "/creatoros-assignment/static/js/runtime-main.3f167048.js.map",
     "static/js/2.a1caea8d.chunk.js": "/creatoros-assignment/static/js/2.a1caea8d.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.3f167048.js",
     "static/js/2.a1caea8d.chunk.js",
     "static/css/main.133ac507.chunk.css",
-    "static/js/main.376162d6.chunk.js"
+    "static/js/main.978a465c.chunk.js"
   ]
 }
