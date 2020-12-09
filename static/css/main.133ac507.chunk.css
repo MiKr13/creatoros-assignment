@@ -1,0 +1,2 @@
+.App{font-family:sans-serif;text-align:center}a:hover{text-decoration:none!important}a.active:before{content:"------"}a.active:before,a:hover:before{line-height:0;position:absolute;top:56px;border:4px solid #000;border-top:none}a:hover:before{content:"---"}
+/*# sourceMappingURL=main.133ac507.chunk.css.map */

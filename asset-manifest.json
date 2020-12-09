@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/creatoros-assignment/static/css/main.133ac507.chunk.css",
+    "main.js": "/creatoros-assignment/static/js/main.aec9974c.chunk.js",
+    "main.js.map": "/creatoros-assignment/static/js/main.aec9974c.chunk.js.map",
+    "runtime-main.js": "/creatoros-assignment/static/js/runtime-main.3f167048.js",
+    "runtime-main.js.map": "/creatoros-assignment/static/js/runtime-main.3f167048.js.map",
+    "static/js/2.a1caea8d.chunk.js": "/creatoros-assignment/static/js/2.a1caea8d.chunk.js",
+    "static/js/2.a1caea8d.chunk.js.map": "/creatoros-assignment/static/js/2.a1caea8d.chunk.js.map",
+    "index.html": "/creatoros-assignment/index.html",
+    "static/css/main.133ac507.chunk.css.map": "/creatoros-assignment/static/css/main.133ac507.chunk.css.map",
+    "static/js/2.a1caea8d.chunk.js.LICENSE.txt": "/creatoros-assignment/static/js/2.a1caea8d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f167048.js",
+    "static/js/2.a1caea8d.chunk.js",
+    "static/css/main.133ac507.chunk.css",
+    "static/js/main.aec9974c.chunk.js"
+  ]
+}
