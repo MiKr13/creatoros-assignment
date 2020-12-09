@@ -1,0 +1,26 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+a.active::before {
+    content: '------';
+    line-height: 0;
+    border: 4px black solid;
+    position: absolute;
+    top: 56px;
+    border-top: none;
+}
+
+a:hover::before {
+    content: '---';
+    line-height: 0;
+    border: 4px black solid;
+    position: absolute;
+    top: 56px;
+    border-top: none;
+}
