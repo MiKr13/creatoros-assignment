@@ -7,13 +7,15 @@ import PropTypes from 'prop-types'
 const drawerWidth = 340;
 
 const useStyles = makeStyles((theme) => ({
-    nestedRoot: {
+    root: {
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    nestedRoot: {
         marginTop: "15px",
         fontStyle: 'bold',
-        alignItems: 'center',
     },
     link: {
         color: '#1c1c1c',

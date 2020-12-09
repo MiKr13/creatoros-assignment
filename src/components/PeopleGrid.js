@@ -35,9 +35,21 @@ const PeopleGrid = ({ people, width }) => {
         return 1;
     }
 
+    const getCellHeight = () => {
+        if (isWidthUp('lg', width)) {
+            return 400;
+        }
+
+        if (isWidthUp('md', width)) {
+            return 300;
+        }
+
+        return 200;
+    }
+
     return (
         <Container maxWidth="lg" className={classes.root} id="profile">
-            <GridList cellHeight={400} cols={getGridListCols()} spacing={20} className={classes.gridList}>
+            <GridList cellHeight={getCellHeight()} cols={getGridListCols()} spacing={20} className={classes.gridList}>
                 {people.map((person, index) => (
                     <GridListTile key={index} cols={1}>
                         <Image

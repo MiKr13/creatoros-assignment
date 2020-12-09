@@ -4,27 +4,27 @@ import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import ScrollButton from './common/ScrollButton';
 
-const ProfileSection = ({ name, email, image, isLoggedIn }) => {
+const useStyles = makeStyles((theme) => ({
+    root: {
+        height: '100%',
+        marginTop: theme.spacing(10),
+        marginBottom: theme.spacing(10)
+    },
+    large: {
+        width: theme.spacing(45),
+        height: theme.spacing(45),
+    },
+    avatar: {
+        padding: '20px 40px'
+    },
+    center: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+}));
 
-    const useStyles = makeStyles((theme) => ({
-        root: {
-            height: '100%',
-            marginTop: theme.spacing(10),
-            marginBottom: theme.spacing(10)
-        },
-        large: {
-            width: theme.spacing(45),
-            height: theme.spacing(45),
-        },
-        avatar: {
-            padding: '20px 40px'
-        },
-        center: {
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-        }
-    }));
+const ProfileSection = ({ name, email, image, isLoggedIn }) => {
 
     const classes = useStyles();
 
