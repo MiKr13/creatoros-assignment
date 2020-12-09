@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "This is a project with simple ui & google oauth sign in",
     "private": true,
+    "homepage": "http://MiKr13.github.io/creatoros-assignment",
     "dependencies": {
         "@material-ui/core": "^4.11.2",
         "@material-ui/icons": "^4.11.2",
@@ -12,11 +13,15 @@
         "react-google-login": "5.1.25",
         "react-scripts": "4.0.1"
     },
+    "devDependencies": {
+        "gh-pages": "^3.1.0"
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "eject": "react-scripts eject",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [

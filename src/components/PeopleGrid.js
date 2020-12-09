@@ -1,5 +1,6 @@
 import { Container, GridList, GridListTile, GridListTileBar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import Image from './common/Image';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,12 +16,28 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const PeopleGrid = ({ people }) => {
+const PeopleGrid = ({ people, width }) => {
     const classes = useStyles();
+
+    const getGridListCols = () => {
+        if (isWidthUp('xl', width)) {
+            return 3;
+        }
+
+        if (isWidthUp('lg', width)) {
+            return 2;
+        }
+
+        if (isWidthUp('md', width)) {
+            return 2;
+        }
+
+        return 1;
+    }
 
     return (
         <Container maxWidth="lg" className={classes.root} id="profile">
-            <GridList cellHeight={400} cols={3} spacing={20} className={classes.gridList}>
+            <GridList cellHeight={400} cols={getGridListCols()} spacing={20} className={classes.gridList}>
                 {people.map((person, index) => (
                     <GridListTile key={index} cols={1}>
                         <Image
@@ -38,4 +55,4 @@ const PeopleGrid = ({ people }) => {
     )
 };
 
-export default PeopleGrid;
+export default withWidth()(PeopleGrid);

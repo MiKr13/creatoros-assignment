@@ -64,16 +64,16 @@ const navLink = [
 ];
 
 const App = () => {
-    const [activeNav, setActiveNav] = useState(0);
+    const [activeNav, setActiveNav] = useState(0); //NOTE: to track active nav link
 
     const [profileInfo, changeProfileInfo] = useState({
         googleId: '',
         name: '',
         image: '',
         email: ''
-    });
+    }); //NOTE: to track google oauth data
 
-    const handleResponse = (response) => {
+    const handleResponse = (response) => { //NOTE: to handle google oauth login response
         if (response) {
             changeProfileInfo({
                 googleId: response.profileObj.googleId,

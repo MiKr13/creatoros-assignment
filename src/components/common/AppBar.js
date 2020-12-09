@@ -15,13 +15,13 @@ const AppBar = ({ Left, Center, Right }) => {
     return (
         <Toolbar className={classes.root}>
             <Grid container spacing={5}>
-                <Grid item xs>
+                <Grid item xs={6} sm={6} md>
                     {Left ? Left : null}
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} sm={6} md={5}>
                     {Center ? Center : null}
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12} sm={12} md>
                     {Right ? Right : null}
                 </Grid>
             </Grid>

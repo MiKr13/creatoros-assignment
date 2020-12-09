@@ -7,8 +7,8 @@ const RightImageSection = ({ id, src, alt, height, width }) => {
 
     return (
         <Grid id={id} container spacing={5}>
-            <Grid item xs={5}></Grid>
-            <Grid item xs={7}>
+            <Grid item md={5} xs={false}></Grid>
+            <Grid item md={7} xs={12}>
                 <Image alt={alt} src={src} height={height} width={width} />
             </Grid>
         </Grid>
