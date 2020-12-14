@@ -15,12 +15,7 @@ const urlBase64ToUint8Array = (base64String) => {
     return outputArray;
 }
 
-export default async function run() {
-    console.log('Registering service worker');
-    const registration = await navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/worker.js`);
-    console.log('Registered service worker');
-
-    console.log('Registering push');
+const subscribeForPushNotification = async (registration) => {
     const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(publicVapidKey)
@@ -32,5 +27,40 @@ export default async function run() {
             'content-type': 'application/json'
         }
     });
+}
 
+export default async function run() {
+    try {
+        console.log('Registering service worker');
+        const registration = await navigator.serviceWorker.register(`${process.env.PUBLIC_URL}/worker.js`);
+        console.log('Registered service worker');
+
+        console.log('Registering push');
+
+        let serviceWorker;
+
+        if (registration.installing) {
+            serviceWorker = registration.installing;
+        } else if (registration.waiting) {
+            serviceWorker = registration.waiting;
+        } else if (registration.active) {
+            serviceWorker = registration.active;
+        }
+
+        if (serviceWorker) {
+            if (serviceWorker.state === "activated") {
+                subscribeForPushNotification(registration);
+            }
+            serviceWorker.addEventListener("statechange", (e) => {
+                console.log("sw statechange : ", e.target.state);
+                if (e.target.state === "activated") {
+                    // use pushManger for subscribing here.
+                    console.log("Just now activated. now we can subscribe for push notification")
+                    subscribeForPushNotification(registration);
+                }
+            });
+        }
+    } catch (error) {
+        console.error(error);
+    }
 }
