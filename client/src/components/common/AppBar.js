@@ -1,6 +1,7 @@
 import { Toolbar, Grid } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types'
+import NotificationButton from '../NotificationButton'
 
 const AppBar = ({ Left, Center, Right }) => {
     const useStyles = makeStyles((theme) => ({
@@ -21,8 +22,11 @@ const AppBar = ({ Left, Center, Right }) => {
                 <Grid item xs={6} sm={6} md={5}>
                     {Center ? Center : null}
                 </Grid>
-                <Grid item xs={12} sm={12} md>
+                <Grid item xs={6} sm={6} md>
                     {Right ? Right : null}
+                </Grid>
+                <Grid item xs={6} sm={6} md>
+                    <NotificationButton />
                 </Grid>
             </Grid>
         </Toolbar>
