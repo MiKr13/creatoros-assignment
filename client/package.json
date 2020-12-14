@@ -3,7 +3,6 @@
     "version": "0.1.0",
     "description": "This is a project with simple ui & google oauth sign in",
     "private": true,
-    "homepage": "http://MiKr13.github.io/creatoros-assignment",
     "dependencies": {
         "@material-ui/core": "^4.11.2",
         "@material-ui/icons": "^4.11.2",
